@@ -12,4 +12,4 @@ def browser():
     driver = webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager().install()))
     yield driver
     driver.quit()
-    print('Test done')
+    print('Test done')j
