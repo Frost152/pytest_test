@@ -15,4 +15,3 @@ def test_loggin(browser):
     login.open()
     login.authorization("standard_user", "secret_sauce")
     print(login.get_current_url())
-    print('zalupa')
