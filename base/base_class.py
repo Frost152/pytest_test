@@ -36,3 +36,5 @@ class Base:
         file_name = f"screenshot{postfix}.png"
         self.driver.save_screenshot(f"screen/{file_name}")
         # Запрос на изменение базового класса67
+
+        еуые
