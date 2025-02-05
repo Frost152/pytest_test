@@ -37,4 +37,4 @@ class Base:
         self.driver.save_screenshot(f"screen/{file_name}")
         # Запрос на изменение базового класса67
 
-        еуые
+        еуые]
