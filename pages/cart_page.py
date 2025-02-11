@@ -10,7 +10,6 @@ class CartPage(Base):
         super().__init__(driver)
 
     # Locators
-    checkout_button = "//button[@data-test='checkout']"
 
     # Getters
     def get_checkout_button(self):
