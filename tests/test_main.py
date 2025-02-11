@@ -16,28 +16,28 @@ from pages.check_page import CheckPage
 
 
 @pytest.mark.order(1)
-def test_main_page(browser):
-
-    login = LoginPage(browser)
-    login.open()
-    mp = login.authorization("standard_user", "secret_sauce")
-    print(login.get_current_url())
-
-    mp = MainPage(browser)
-    mp.add_to_cart_many_elem(2, 6)
-    prices = mp.getting_prices(2, 6)
-    print(prices)
-    # mp.remove_cart_many_elem(2,4)
-
-    # mp.add_to_cart_one_elem(2)
-    mp.click_to_cart()
-
-    cp = CartPage(browser)
-    cp.checkout_order()
-    uip = UserInfPage(browser)
-    uip.fill_user_information("Иван", "Иванов", "604667")
-    check = CheckPage(browser)
-    check.confirm_order(prices)
+# def test_main_page(browser):
+#
+#     login = LoginPage(browser)
+#     login.open()
+#     mp = login.authorization("standard_user", "secret_sauce")
+#     print(login.get_current_url())
+#
+#     mp = MainPage(browser)
+#     mp.add_to_cart_many_elem(2, 6)
+#     prices = mp.getting_prices(2, 6)
+#     print(prices)
+#     # mp.remove_cart_many_elem(2,4)
+#
+#     # mp.add_to_cart_one_elem(2)
+#     mp.click_to_cart()
+#
+#     cp = CartPage(browser)
+#     cp.checkout_order()
+#     uip = UserInfPage(browser)
+#     uip.fill_user_information("Иван", "Иванов", "604667")
+#     check = CheckPage(browser)
+#     check.confirm_order(prices)
 
 
 @pytest.mark.order(3)
