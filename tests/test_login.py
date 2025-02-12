@@ -3,13 +3,15 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from pages.login_page import LoginPage
+import allure
+
 
 # Опции драйвера
 # options = webdriver.ChromeOptions()
 # options.add_experimental_option("detach", True)
 # driver = webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager().install()))
 
-
+@allure.description("Описание")
 def test_loggin(browser):
     login = LoginPage(browser)
     login.open()

@@ -8,9 +8,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 @pytest.fixture()
 def browser():
     options = webdriver.ChromeOptions()
-    options.add_experimental_option("detach", True)
-    driver = webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager().install()))
+    # options.add_experimental_option("detach", True)
+    options.add_argument("--headless")
+    driver = webdriver.Chrome(options=options, service=ChromeService())
     yield driver
     driver.quit()
     print('Test done')
-    zaklupa5569090
+

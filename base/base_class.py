@@ -1,8 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 from datetime import datetime
+
+
 class Base:
     def __init__(self, driver):
         self.driver = driver
@@ -31,6 +32,7 @@ class Base:
             EC.visibility_of_element_located((By.XPATH, "//span[@class='title']")))
 
     """Скриншот"""
+
     def get_screen_shot(self):
         postfix = datetime.now().strftime("%H-%M-%S")
         file_name = f"screenshot{postfix}.png"
