@@ -29,10 +29,10 @@ jobs:
         run: pip install -r requirements.txt
       - name: first_test
         if: "github.event.inputs.deployment_target == 'first_test'"
-        run: pytest tests/test_main::test_buy_one
+        run: pytest tests/test_main.py::test_buy_one
       - name: second_test
         if: "github.event.inputs.deployment_target == 'second_test'"
-        run: pytest tests/test_main::test_buy_two
+        run: pytest tests/test_main.py::test_buy_two
       - name: three_test
         if: "github.event.inputs.deployment_target == 'three_test'"
-        run: pytest tests/test_login::test_loggin
+        run: pytest tests/test_login.py::test_loggin
